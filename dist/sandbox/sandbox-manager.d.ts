@@ -6,9 +6,6 @@ import type { SandboxAskCallback, FsReadRestrictionConfig, FsWriteRestrictionCon
 import { type SandboxDependencyCheck } from './linux-sandbox-utils.js';
 import { type WindowsBinShell } from './windows-sandbox-utils.js';
 import { SandboxViolationStore } from './sandbox-violation-store.js';
-/**
- * Interface for the sandbox manager API
- */
 export interface ISandboxManager {
     initialize(runtimeConfig: SandboxRuntimeConfig, sandboxAskCallback?: SandboxAskCallback, enableLogMonitor?: boolean): Promise<void>;
     isSupportedPlatform(): boolean;
@@ -48,9 +45,8 @@ export interface ISandboxManager {
     cleanupAfterCommand(): void;
     reset(): Promise<void>;
 }
-/**
- * Global sandbox manager that handles both network and filesystem restrictions
- * for this session. This runs outside of the sandbox, on the host machine.
- */
+/** Create an independent macOS/Linux sandbox session with its own policy and proxies. */
+export declare function createSandboxManager(): ISandboxManager;
+/** Backwards-compatible process-wide manager, including Windows support. */
 export declare const SandboxManager: ISandboxManager;
 //# sourceMappingURL=sandbox-manager.d.ts.map
