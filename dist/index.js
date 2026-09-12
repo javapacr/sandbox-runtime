@@ -1,5 +1,5 @@
 // Library exports
-export { SandboxManager } from './sandbox/sandbox-manager.js';
+export { SandboxManager, createSandboxManager, } from './sandbox/sandbox-manager.js';
 export { SandboxViolationStore } from './sandbox/sandbox-violation-store.js';
 export { SandboxRuntimeConfigSchema, NetworkConfigSchema, FilesystemConfigSchema, CredentialsConfigSchema, IgnoreViolationsConfigSchema, RipgrepConfigSchema, } from './sandbox/sandbox-config.js';
 // Windows install/status API

@@ -1,4 +1,4 @@
-export { SandboxManager } from './sandbox/sandbox-manager.js';
+export { SandboxManager, createSandboxManager, type ISandboxManager, } from './sandbox/sandbox-manager.js';
 export { SandboxViolationStore } from './sandbox/sandbox-violation-store.js';
 export type { SandboxRuntimeConfig, NetworkConfig, FilesystemConfig, CredentialsConfig, CredentialFileConfig, CredentialEnvVarConfig, CredentialMode, IgnoreViolationsConfig, } from './sandbox/sandbox-config.js';
 export { SandboxRuntimeConfigSchema, NetworkConfigSchema, FilesystemConfigSchema, CredentialsConfigSchema, IgnoreViolationsConfigSchema, RipgrepConfigSchema, } from './sandbox/sandbox-config.js';
